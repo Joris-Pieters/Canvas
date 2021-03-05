@@ -1,0 +1,14 @@
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\bin\Debug\Canvas.exe.config
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\bin\Debug\Canvas.exe
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\bin\Debug\Canvas.pdb
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas.csprojResolveAssemblyReference.cache
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\InkPadWindow.g.cs
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\App.g.cs
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas_MarkupCompile.cache
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas_MarkupCompile.lref
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\InkPadWindow.baml
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas.g.resources
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Road_Marker.Properties.Resources.resources
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas.csproj.GenerateResource.Cache
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas.exe
+C:\Users\joris.pieters\Documents\Other\Canvas\Canvas\obj\Debug\Canvas.pdb

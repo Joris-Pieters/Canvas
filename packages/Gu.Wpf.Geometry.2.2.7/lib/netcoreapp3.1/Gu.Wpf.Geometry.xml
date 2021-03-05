@@ -1,0 +1,831 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Gu.Wpf.Geometry</name>
+    </assembly>
+    <members>
+        <member name="T:Gu.Wpf.Geometry.Balloon">
+            <summary>
+            Draws a ballon callout.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Balloon.CornerRadiusProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Balloon.CornerRadius"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Balloon.ConnectorOffsetProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Balloon.ConnectorOffset"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Balloon.ConnectorAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Balloon.ConnectorAngle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Balloon.PlacementTargetProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Balloon.PlacementTarget"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Balloon.PlacementOptionsProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Balloon.PlacementOptions"/> dependency property.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Balloon.CornerRadius">
+            <summary>
+            Gets or sets the <see cref="P:Gu.Wpf.Geometry.Balloon.CornerRadius"/> property allows users to control the roundness of the corners independently by
+            setting a radius value for each corner.  Radius values that are too large are scaled so that they
+            smoothly blend from corner to corner.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Balloon.ConnectorOffset">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Vector"/> specifying the connector of the <see cref="T:Gu.Wpf.Geometry.Balloon"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Balloon.ConnectorAngle">
+            <summary>
+            Gets or sets the angle of the connector of the <see cref="T:Gu.Wpf.Geometry.Balloon"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Balloon.PlacementTarget">
+            <summary>
+            Gets or sets PlacementTarget property of the <see cref="T:Gu.Wpf.Geometry.Balloon"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Balloon.PlacementOptions">
+            <summary>
+            Gets or sets <see cref="P:Gu.Wpf.Geometry.Balloon.PlacementOptions"/> property of the <see cref="T:Gu.Wpf.Geometry.Balloon"/>.
+            </summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.BalloonBase">
+            <summary>
+            Base class for balloon shapes.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.ConnectorOffsetProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BalloonBase.ConnectorOffset"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.ConnectorAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BalloonBase.ConnectorAngle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.PlacementTargetProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BalloonBase.PlacementTarget"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.PlacementRectangleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BalloonBase.PlacementRectangle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.PlacementOptionsProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BalloonBase.PlacementOptions"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.ConnectorVertexPointProperty">
+            <summary>Identifies the ConnectorVertexPoint dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.ConnectorPoint1Property">
+            <summary>Identifies the ConnectorPoint1 dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BalloonBase.ConnectorPoint2Property">
+            <summary>Identifies the ConnectorPoint2 dependency property.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.ConnectorOffset">
+            <summary>
+            Gets or sets the <see cref="T:System.Windows.Vector"/> specifying the connector of the <see cref="T:Gu.Wpf.Geometry.BalloonBase"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.ConnectorAngle">
+            <summary>
+            Gets or sets the angle of the connector of the <see cref="T:Gu.Wpf.Geometry.BalloonBase"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.PlacementTarget">
+            <summary>
+            Gets or sets PlacementTarget property of the <see cref="T:Gu.Wpf.Geometry.BalloonBase"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.PlacementRectangle">
+            <summary>
+            Gets or sets PlacementRectangle property of the balloon.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.PlacementOptions">
+            <summary>
+            Gets or sets <see cref="P:Gu.Wpf.Geometry.BalloonBase.PlacementOptions"/> property of the <see cref="T:Gu.Wpf.Geometry.BalloonBase"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.DefiningGeometry">
+            <summary>
+            Gets the <see cref="T:System.Windows.Media.Geometry"/> that defines the balloon.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.ConnectorGeometry">
+            <summary>
+            Gets the <see cref="T:System.Windows.Media.Geometry"/> that defines the connector.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BalloonBase.BoxGeometry">
+            <summary>
+            Gets the <see cref="T:System.Windows.Media.Geometry"/> that defines the box.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.MeasureOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.UpdateCachedGeometries">
+            <summary>
+            Updates <see cref="P:Gu.Wpf.Geometry.BalloonBase.BoxGeometry"/> and <see cref="P:Gu.Wpf.Geometry.BalloonBase.ConnectorGeometry"/>.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.CanCreateConnectorGeometry">
+            <summary>
+            Check if connector c an be created.
+            </summary>
+            <returns>True if conditions are satisfied.</returns>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.GetOrCreateBoxGeometry(System.Windows.Size)">
+            <summary>
+            Get or create the box geometry.
+            </summary>
+            <param name="renderSize">The <see cref="T:System.Windows.Size"/>.</param>
+            <returns>The <see cref="T:System.Windows.Media.Geometry"/>.</returns>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.GetOrCreateConnectorGeometry(System.Windows.Size)">
+            <summary>
+            Get or create the connector geometry.
+            </summary>
+            <param name="renderSize">The <see cref="T:System.Windows.Size"/>.</param>
+            <returns>The <see cref="T:System.Windows.Media.Geometry"/>.</returns>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.CreateGeometry(System.Windows.Media.Geometry,System.Windows.Media.Geometry)">
+            <summary>
+            Get or create the geometry.
+            </summary>
+            <param name="box">The box <see cref="T:System.Windows.Media.Geometry"/>.</param>
+            <param name="connector">The connector <see cref="T:System.Windows.Media.Geometry"/>.</param>
+            <returns>The <see cref="T:System.Windows.Media.Geometry"/>.</returns>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.UpdateConnectorOffset">
+            <summary>
+            Update the connector offset.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.OnLayoutUpdated(System.Object,System.EventArgs)">
+            <summary>
+            Called when properties causing layout update changes.
+            </summary>
+            <param name="sender">The <see cref="T:Gu.Wpf.Geometry.BalloonBase"/> that the change happened on.</param>
+            <param name="e">The <see cref="T:System.EventArgs"/>.</param>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.GetTarget">
+            <summary>
+            Gets <see cref="P:Gu.Wpf.Geometry.BalloonBase.PlacementTarget"/> if set or GetVisualParent().
+            </summary>
+            <returns>The target <see cref="T:System.Windows.UIElement"/>.</returns>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BalloonBase.GetTargetRect">
+            <summary>
+            Get the target <see cref="T:System.Windows.Rect"/>.
+            </summary>
+            <returns>The <see cref="T:System.Windows.Rect"/>.</returns>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.BoxBalloon">
+            <summary>
+            A rectangular balloon.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.BoxBalloon.CornerRadiusProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.BoxBalloon.CornerRadius"/> dependency property.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.BoxBalloon.CornerRadius">
+            <summary>
+            Gets or sets the <see cref="P:Gu.Wpf.Geometry.BoxBalloon.CornerRadius"/> that allows users to control the roundness of the corners independently by
+            setting a radius value for each corner.  Radius values that are too large are scaled so that they
+            smoothly blend from corner to corner.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BoxBalloon.GetOrCreateBoxGeometry(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BoxBalloon.GetOrCreateConnectorGeometry(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.BoxBalloon.AdjustedCornerRadius">
+            <summary>
+            Calculates the adjusted corner radius.
+            </summary>
+            <returns>A <see cref="P:Gu.Wpf.Geometry.BoxBalloon.CornerRadius"/>.</returns>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.EllipseBalloon">
+            <summary>
+            An elliptical balloon.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.EllipseBalloon.GetOrCreateBoxGeometry(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.EllipseBalloon.GetOrCreateConnectorGeometry(System.Windows.Size)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.EllipseBalloon.UpdateConnectorOffset">
+            <inheritdoc/>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.PlacementOptions">
+            <summary>
+            Placement options for <see cref="T:Gu.Wpf.Geometry.Balloon"/>.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.PlacementOptions.Auto">
+            <summary> Both horizontal and vertical auto. </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.PlacementOptions.Center">
+            <summary> Both horizontal and vertical centered. </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptions.#ctor(Gu.Wpf.Geometry.HorizontalPlacement,Gu.Wpf.Geometry.VerticalPlacement,System.Double)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.PlacementOptions"/> class.
+            </summary>
+            <param name="horizontal">The <see cref="T:Gu.Wpf.Geometry.HorizontalPlacement"/>.</param>
+            <param name="vertical">The <see cref="T:Gu.Wpf.Geometry.VerticalPlacement"/>.</param>
+            <param name="offset">The offset.</param>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptions.Horizontal">
+            <summary>
+            Gets the <see cref="T:Gu.Wpf.Geometry.HorizontalPlacement"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptions.Vertical">
+            <summary>
+            Gets the <see cref="T:Gu.Wpf.Geometry.VerticalPlacement"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptions.Offset">
+            <summary>
+            Gets the offset.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptions.ToString">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptions.GetPointOnTarget(System.Windows.Rect,System.Windows.Rect)">
+            <summary>
+            Get the point on <paramref name="target"/>.
+            </summary>
+            <param name="placed">The balloon <see cref="T:System.Windows.Rect"/>.</param>
+            <param name="target">The target <see cref="T:System.Windows.Rect"/>.</param>
+            <returns>The point if found.</returns>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.PlacementOptionsConverter">
+            <summary>
+            A <see cref="T:System.ComponentModel.TypeConverter"/> for <see cref="T:Gu.Wpf.Geometry.PlacementOptions"/>.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptionsConverter.CanConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptionsConverter.CanConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptionsConverter.ConvertFrom(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptionsConverter.ConvertTo(System.ComponentModel.ITypeDescriptorContext,System.Globalization.CultureInfo,System.Object,System.Type)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.PlacementOptionsExtension">
+            <summary>
+            <see cref="T:System.Windows.Markup.MarkupExtension"/> for creating <see cref="T:Gu.Wpf.Geometry.PlacementOptions"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptionsExtension.Horizontal">
+            <summary>
+            Gets or sets the <see cref="T:Gu.Wpf.Geometry.HorizontalPlacement"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptionsExtension.Vertical">
+            <summary>
+            Gets or sets the <see cref="T:Gu.Wpf.Geometry.VerticalPlacement"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.PlacementOptionsExtension.Offset">
+            <summary>
+            Gets or sets the offset.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.PlacementOptionsExtension.ProvideValue(System.IServiceProvider)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.AngularGradientEffect">
+            <summary>A gradient that changes value with angle.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartColorProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartColor"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.EndColorProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.EndColor"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CenterPointProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CenterPoint"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartAngle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CentralAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CentralAngle"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.AngularGradientEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.AngularGradientEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartColor">
+            <summary>Gets or sets the primary color of the gradient. </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.EndColor">
+            <summary>Gets or sets the secondary color of the gradient. </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CenterPoint">
+            <summary>Gets or sets the center of the gradient. </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.StartAngle">
+            <summary>Gets or sets the starting angle of the gradient, counterclockwise from X-axis.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.AngularGradientEffect.CentralAngle">
+            <summary>Gets or sets the arc length angle of the gradient, counterclockwise from X-axis.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.DesaturateEffect">
+            <summary>An effect that turns the input into shades of a single color.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.DesaturateEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.DesaturateEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.DesaturateEffect.StrengthProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.DesaturateEffect.Strength"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.DesaturateEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.DesaturateEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.DesaturateEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.DesaturateEffect.Strength">
+            <summary>
+            Gets or sets the strangth that the image is desaturated with.
+            The value can be between 0 and 1.
+            0 means the original image is returned.
+            1 means a monochrome image is produced.
+            </summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.FadeEffect">
+            <summary>Fade to a color by animating the strength.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.FadeEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.FadeEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.FadeEffect.StrengthProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.FadeEffect.Strength"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.FadeEffect.ToProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.FadeEffect.To"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.FadeEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.FadeEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.FadeEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.FadeEffect.Strength">
+            <summary>Gets or sets the color used to tint the input.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.FadeEffect.To">
+            <summary>Gets or sets the color to fade to.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.HslWheelEffect">
+            <summary>
+            An effect that renders a HSL colour wheel.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerRadiusProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerRadius"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerSaturationProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerSaturation"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.LightnessProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.Lightness"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.StartAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.StartAngle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HslWheelEffect.CentralAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.CentralAngle"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.HslWheelEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.HslWheelEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerRadius">
+            <summary>Gets or sets the inner radius.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.InnerSaturation">
+            <summary>Gets or sets the inner saturation.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.Lightness">
+            <summary>Gets or sets the lightness in Hue, Saturation and Lightness.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.StartAngle">
+            <summary>Gets or sets the starting angle of the gradient, clockwise from X-axis.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HslWheelEffect.CentralAngle">
+            <summary>Gets or sets the central angle of the gradient, positive value for clockwise.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.HsvWheelEffect">
+            <summary>
+            An effect that renders a HSV colour wheel.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerRadiusProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerRadius"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerSaturationProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerSaturation"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.ValueProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.Value"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.StartAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.StartAngle"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.HsvWheelEffect.CentralAngleProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.CentralAngle"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.HsvWheelEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.HsvWheelEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerRadius">
+            <summary>Gets or sets the inner radius.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.InnerSaturation">
+            <summary>Gets or sets the inner saturation.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.Value">
+            <summary>Gets or sets the value in Hue, Saturation, Value.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.StartAngle">
+            <summary>Gets or sets the starting angle of the gradient, clockwise from X-axis.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.HsvWheelEffect.CentralAngle">
+            <summary>Gets or sets the central angle of the gradient, positive value for clockwise.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Effects.MaskEffect">
+            <summary>An effect that makes black pixels transparent and all other pixels the provided color.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.MaskEffect.InputProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.MaskEffect.Input"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.MaskEffect.ColorProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.MaskEffect.Color"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.MaskEffect.ToleranceProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Effects.MaskEffect.Tolerance"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Effects.MaskEffect.Shader">
+            <summary>
+            The uri should be something like pack://application:,,,/Gu.Wpf.Geometry;component/Effects/MaskEffect.ps
+            The file MaskEffect.ps should have BuildAction: Resource.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Effects.MaskEffect.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.Effects.MaskEffect"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.MaskEffect.Input">
+            <summary>
+            Gets or sets the Brush called "Input" that is required by a shader.
+            This property contains the input image and it is usually not set directly - it is set automatically when our effect is applied to a control.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.MaskEffect.Color">
+            <summary>Gets or sets the color to use for non-black pixels.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Effects.MaskEffect.Tolerance">
+            <summary>Gets or sets the tolerance for what to treat as black.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.GradientMode">
+            <summary>
+            Specifies how <see cref="T:Gu.Wpf.Geometry.GradientPath"/> is rendered.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientMode.Perpendicular">
+            <summary>
+            Gradient across the path.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientMode.Parallel">
+            <summary>
+            Gradient along the path.
+            </summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.GradientPath">
+            <summary>
+            FlattenedFigure.
+            </summary>
+            <summary>
+            FlattenedSegment.
+            </summary>
+            <summary>
+            Draws a path with gradient along or across.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.DataProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.Data"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.GradientStopsProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.GradientStops"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.GradientModeProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.GradientMode"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.ColorInterpolationModeProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.ColorInterpolationMode"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.StrokeThicknessProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.StrokeThickness"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.StrokeStartLineCapProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.StrokeStartLineCap"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.StrokeEndLineCapProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.StrokeEndLineCap"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.GradientPath.ToleranceProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.GradientPath.Tolerance"/> dependency property.</summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.GradientPath.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Gu.Wpf.Geometry.GradientPath"/> class.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.Data">
+            <summary>
+            Gets or sets the defining <see cref="T:System.Windows.Media.Geometry"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.GradientStops">
+            <summary>
+            Gets or sets <see cref="T:System.Windows.Media.GradientStopCollection"/>.  Default value is new FreezableDefaultValueFactory(GradientStopCollection.Empty).
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.GradientMode">
+            <summary>
+            Gets or sets the <see cref="P:Gu.Wpf.Geometry.GradientPath.GradientMode"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.ColorInterpolationMode">
+            <summary>
+            Gets or sets the <see cref="P:Gu.Wpf.Geometry.GradientPath.ColorInterpolationMode"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.StrokeThickness">
+            <summary>
+            Gets or sets the stroke thickness.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.StrokeStartLineCap">
+            <summary>
+            Gets or sets stroke start <see cref="T:System.Windows.Media.PenLineCap"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.StrokeEndLineCap">
+            <summary>
+            Gets or sets stroke end <see cref="T:System.Windows.Media.PenLineCap"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.GradientPath.Tolerance">
+            <summary>
+            Gets or sets the tolerance.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.GradientPath.MeasureOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.GradientPath.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gu.Wpf.Geometry.HorizontalPlacement">
+            <summary>
+            The placement in horizontal direction.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.HorizontalPlacement.Auto">
+            <summary>Automatic.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.HorizontalPlacement.Left">
+            <summary>Align left.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.HorizontalPlacement.Center">
+            <summary>Center.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.HorizontalPlacement.Right">
+            <summary>Align right.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.VerticalPlacement">
+            <summary>
+            The placement in horizontal direction.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.VerticalPlacement.Auto">
+            <summary>Automatic.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.VerticalPlacement.Top">
+            <summary>Align to top.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.VerticalPlacement.Center">
+            <summary>Center.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.VerticalPlacement.Bottom">
+            <summary>Align to bottom.</summary>
+        </member>
+        <member name="T:Gu.Wpf.Geometry.Zoombox">
+            <summary>
+            A decorator that adds zoom and pan.
+            </summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Zoombox.WheelZoomFactorProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Zoombox.WheelZoomFactor"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Zoombox.MinZoomProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Zoombox.MinZoom"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Zoombox.MaxZoomProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Zoombox.MaxZoom"/> dependency property.</summary>
+        </member>
+        <member name="F:Gu.Wpf.Geometry.Zoombox.ContentMatrixProperty">
+            <summary>Identifies the <see cref="P:Gu.Wpf.Geometry.Zoombox.ContentMatrix"/> dependency property.</summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.WheelZoomFactor">
+            <summary>
+            Gets or sets the increment zoom is changed on each mouse wheel.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.MinZoom">
+            <summary>
+            Gets or sets the minimum zoom allowed.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.MaxZoom">
+            <summary>
+            Gets or sets the maximum zoom allowed.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.ContentMatrix">
+            <summary>
+            Gets or sets the transform applied to the contents.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.Child">
+            <inheritdoc />
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.VisualChildrenCount">
+            <inheritdoc />
+        </member>
+        <member name="P:Gu.Wpf.Geometry.Zoombox.LogicalChildren">
+            <summary>
+            Gets enumerator with logical children.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.Zoom(System.Double)">
+            <summary>
+            Zoom around a the center of the currently visible part.
+            </summary>
+            <param name="scale">The amount to resize as a multiplier.</param>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.Zoom(System.Windows.Vector)">
+            <summary>
+            Zoom around a the center of the currently visible part.
+            </summary>
+            <param name="scale">The amount to resize as a multipliers.</param>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.Zoom(System.Windows.Point,System.Windows.Vector)">
+            <summary>
+            Zoom around a point.
+            </summary>
+            <param name="center">The point to zoom about.</param>
+            <param name="scale">The amount to resize as a multipliers.</param>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.ZoomUniform">
+            <summary>
+            The content is re-sized to fit in the destination dimensions while it preserves its native aspect ratio.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.ZoomUniformToFill">
+            <summary>
+            The content is re-sized to fill the destination dimensions while it preserves its native aspect ratio.
+            If the aspect ratio of the destination rectangle differs from the source, the source content is clipped to fit in the destination dimensions.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.ZoomNone">
+            <summary>
+            The content preserves its original size.
+            </summary>
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.GetVisualChild(System.Int32)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.MeasureOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.ArrangeOverride(System.Windows.Size)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnRender(System.Windows.Media.DrawingContext)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="M:Gu.Wpf.Geometry.Zoombox.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <inheritdoc />
+        </member>
+        <member name="T:Gu.Wpf.Geometry.ZoomCommands">
+            <summary>
+            A collection of commands for <see cref="T:Gu.Wpf.Geometry.Zoombox"/>.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.ZoomCommands.None">
+            <summary>
+            Gets a command that when invoked sets the content to preserves its original size.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.ZoomCommands.Uniform">
+            <summary>
+            Gets a command that when invoked sets the content is re-sized to fit in the destination dimensions while it preserves its native aspect ratio.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.ZoomCommands.UniformToFill">
+            <summary>
+            Gets a command that when invoked sets the content is re-sized to fill the destination dimensions while it preserves its native aspect ratio. If the aspect ratio of the destination rectangle differs from the source, the source content is clipped to fit in the destination dimensions.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.ZoomCommands.Increase">
+            <summary>
+            Gets a command that when invoked increases the zoom.
+            </summary>
+        </member>
+        <member name="P:Gu.Wpf.Geometry.ZoomCommands.Decrease">
+            <summary>
+            Gets a command that when invoked decreases the zoom.
+            </summary>
+        </member>
+    </members>
+</doc>
